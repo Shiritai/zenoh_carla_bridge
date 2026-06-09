@@ -3730,6 +3730,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "serde-big-array"
+version = "0.5.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "11fc7cc2c76d73e0f27ee52abbd64eec84d46f370c88371120433196934e4b7f"
+dependencies = [
+ "serde",
+]
+
+[[package]]
 name = "serde_core"
 version = "1.0.228"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5885,8 +5894,7 @@ dependencies = [
 [[package]]
 name = "zenoh-ros-derive"
 version = "0.3.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "57fbab29b35178103b9a86425f04ffb99c19bac2794a2d3b9955383ba8162b83"
+source = "git+https://github.com/evshary/zenoh-ros-type?branch=main#ec4d3046c36a5e06b981b38ed341c12729de4cde"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -5896,12 +5904,12 @@ dependencies = [
 [[package]]
 name = "zenoh-ros-type"
 version = "0.3.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "de60b0ad41bff1a3c7330e41d606307075b4a37700832888e264eafdc7cddf26"
+source = "git+https://github.com/evshary/zenoh-ros-type?branch=main#ec4d3046c36a5e06b981b38ed341c12729de4cde"
 dependencies = [
  "cdr",
  "paste",
  "serde",
+ "serde-big-array",
  "serde_derive",
  "zenoh",
  "zenoh-ros-derive",

@@ -26,3 +26,9 @@ thiserror = "2.0.16"
 zenoh =  { version = "1.9.0", features = ["shared-memory"] }
 zenoh-ros-type = "0.3.7"
 ctrlc = { version = "3", features = ["termination"] }
+
+# Still a git dep: PoseWithCovarianceStamped (needed for /initialpose) is merged
+# on evshary/zenoh-ros-type main but not yet in a crates.io release. Drop this
+# block and bump the version above once upstream publishes a new release.
+[patch.crates-io]
+zenoh-ros-type = { git = "https://github.com/evshary/zenoh-ros-type", branch = "main" }
